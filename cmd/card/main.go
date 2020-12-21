@@ -45,6 +45,10 @@ func main() {
 	supermarketExpenses := card.SumByMCC(card1.Transactions, someMccCodes)
 	fmt.Println(supermarketExpenses["6555"])
 	fmt.Println(supermarketExpenses["6501"]) // Вывод в копейках
-	fmt.Print(supermarketExpenses["5000"])
+	fmt.Println(supermarketExpenses["5000"])
+
+
+	category := card.TranslateMCC(card1.Transactions[0].MCC)
+	fmt.Println(category)
 
 }
